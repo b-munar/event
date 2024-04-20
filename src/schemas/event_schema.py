@@ -1,10 +1,10 @@
 from marshmallow import Schema, fields
 
-class NoteDeserializeSchema(Schema):
-    note = fields.String(required=True)
+class EventDeserializeSchema(Schema):
+    event = fields.String(required=True)
 
-class NoteSerializeSchema(Schema):
+class EventSerializeSchema(Schema):
     id = fields.UUID()
-    note = fields.String()
+    event = fields.String()
     updateAt = fields.DateTime(format='%Y-%m-%dT%H:%M:%S%z')
     createdAt = fields.DateTime(format='%Y-%m-%dT%H:%M:%S%z')
