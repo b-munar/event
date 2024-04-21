@@ -3,7 +3,7 @@
 1. Clonar repositorio
 
 ```bash
-git clone https://github.com/b-munar/feeding-routines
+git clone https://github.com/b-munar/event
 
 2. 
 
@@ -15,9 +15,9 @@ docker compose up
 
 El servicio de Servicios de terceros.
 
-## 1. Get feeding-routines 
+## 1. Get events 
 
-Retorna rutina de alimentacin.
+Retorna eventos.
 
 <table>
 <tr>
@@ -26,7 +26,7 @@ Retorna rutina de alimentacin.
 </tr>
 <tr>
 <td> Ruta </td>
-<td> <strong>localhost:6150/feeding-routines</strong> </td>
+<td> <strong>localhost:6950/events</strong> </td>
 </tr>
 <tr>
 <td> Parámetros </td>
@@ -57,20 +57,14 @@ Retorna rutina de alimentacin.
 
 ```json
 {
-    "profiles": [
+    "events": [
         {
-            "id": "cc8f6ebf-ce9a-4170-af17-5d04c55cd167",
-            "meals_per_day": 3,
-            "alergies": "Ninguna",
-            "health_issues": "Arritmia",
-            "time_to_cook": 10
-        },
-        {
-            "id": "3b601709-ff3f-4eec-88fa-6764169b3429",
-            "meals_per_day": 3,
-            "alergies": "Ninguna",
-            "health_issues": "Arritmia",
-            "time_to_cook": 10
+            "id": "416cd4c3-044c-407c-a0aa-abd58ec49de6",
+            "titulo": "evente",
+            "fecha": "2019-05-05",
+            "hora": "17:00",
+            "description": "Test event",
+            "location": "Mall"
         }
     ]
 }
@@ -80,9 +74,9 @@ Retorna rutina de alimentacin.
 </tbody>
 </table>
 
-## 2. Post feeding routines 
+## 2. Post events 
 
-Permite realizar creación de rutinas de alimentación.
+Permite realizar creación de eventos.
 
 <table>
 <tr>
@@ -91,7 +85,7 @@ Permite realizar creación de rutinas de alimentación.
 </tr>
 <tr>
 <td> Ruta </td>
-<td> <strong>localhost:6150/feeding-routines</strong> </td>
+<td> <strong>localhost:6950/events</strong> </td>
 </tr>
 <tr>
 <td> Parámetros </td>
@@ -107,10 +101,11 @@ Permite realizar creación de rutinas de alimentación.
 
 ```json
   {
-    "meals_per_day": 3,
-    "alergies": "Ninguna",
-    "health_issues": "Arritmia",
-    "time_to_cook": 10
+ "titulo": "evente",
+ "fecha":"2019-05-05",
+ "description":"Test event",
+ "hora": "17:00",
+ "location":"Mall"
 }
   ```
 </td>
@@ -132,11 +127,12 @@ Permite realizar creación de rutinas de alimentación.
 
 ```json
 {
-    "id": "3b601709-ff3f-4eec-88fa-6764169b3429",
-    "meals_per_day": 3,
-    "alergies": "Ninguna",
-    "health_issues": "Arritmia",
-    "time_to_cook": 10
+    "id": "416cd4c3-044c-407c-a0aa-abd58ec49de6",
+    "titulo": "evente",
+    "fecha": "2019-05-05",
+    "hora": "17:00",
+    "description": "Test event",
+    "location": "Mall"
 }
 ```
 </td>
