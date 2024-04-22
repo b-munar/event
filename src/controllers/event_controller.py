@@ -45,5 +45,5 @@ class EventController(Resource):
         session.close()
         
         events = [event_schema.dump(event) for event in query]
-        return events, 200
+        return {"events":events}, 200
 
