@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask import request
 
-from schemas.sportmen_schema import SportmenDeserializeSchema, SportmenSerializeSchema
+from src.schemas.sportmen_schema import SportmenDeserializeSchema, SportmenSerializeSchema
 from src.database.session import Session
 from src.models.event_model import EventModel, Sportmen
 from src.schemas.event_schema import EventDeserializeSchema, EventSerializeSchema
