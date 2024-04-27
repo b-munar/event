@@ -1,13 +1,15 @@
 from flask import Flask
 from flask_restful import Api
 from src.controllers.ping_controller import Ping
-from src.controllers.event_controller import EventController
+from src.controllers.event_controller import EventController, PartnerController, SportmenController
 
 def create_app():
     app = Flask(__name__)
     api = Api(app)
-    api.add_resource(Ping, '/events/ping')
-    api.add_resource(EventController, '/events')
+    api.add_resource(Ping, '/event/ping')
+    api.add_resource(EventController, '/event')
+    api.add_resource(SportmenController, '/event/sportmen')
+    api.add_resource(PartnerController, '/event/partner')
     return app
 
 if __name__ == "__main__":

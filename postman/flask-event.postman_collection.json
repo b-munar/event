@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "f18d5117-2a50-4d8f-a65c-11e94a1b02ac",
+		"name": "flask-event",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34080647"
+	},
+	"item": [
+		{
+			"name": "Get Events",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTM3Mjk2NDMsImV4cCI6MTcxMzc0MDQ0Mywicm9sZSI6Mn0.cU6mlU0BR4SoaHmdxO1JyADk-UarBdVcfD3oTiFCxfw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6950/events",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Events",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTM3Mjk2NDMsImV4cCI6MTcxMzc0MDQ0Mywicm9sZSI6Mn0.cU6mlU0BR4SoaHmdxO1JyADk-UarBdVcfD3oTiFCxfw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"titulo\": \"evente\",\n \"fecha\":\"2019-05-05\",\n \"description\":\"Test event\",\n \"hora\": \"17:00\",\n \"location\":\"Mall\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6950/events",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
