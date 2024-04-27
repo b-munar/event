@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-event
+  annotations:
+    cloud.google.com/backend-config: '{"default": "event-config"}'
+spec:
+  type: NodePort
+  selector:
+    app: event
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31025
