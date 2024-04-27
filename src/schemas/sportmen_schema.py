@@ -3,7 +3,6 @@ from schemas.event_schema import EventSerializeSchema
 
 class SportmenDeserializeSchema(Schema):
     event_id = fields.UUID()
-    amount = fields.Integer()
 
 class SportmenSerializeSchema(Schema):
     id = fields.UUID()

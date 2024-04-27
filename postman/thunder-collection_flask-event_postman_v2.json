@@ -1,0 +1,71 @@
+{
+    "info": {
+        "_postman_id": "b4bee4ed-4871-4a6f-b117-3ada6eff0e00",
+        "name": "flask-event",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Get Events",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:6950/events",
+                    "path": [
+                        "events"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Y2I2M2EyZS03NmM1LTRiOGUtODQzNC1jZDczMzRhMTE3YjAiLCJpYXQiOjE3MTM2NDQwODgsImV4cCI6MTcxMzY1NDg4OCwicm9sZSI6MX0.m0CD8eLnQcBQj8ZQWwzJGq-PIcfFMalNIQ0WBmCvwvI",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Save Events",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:6950/events",
+                    "path": [
+                        "events"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n \"event\": \"evente\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Y2I2M2EyZS03NmM1LTRiOGUtODQzNC1jZDczMzRhMTE3YjAiLCJpYXQiOjE3MTM2NDQwODgsImV4cCI6MTcxMzY1NDg4OCwicm9sZSI6MX0.m0CD8eLnQcBQj8ZQWwzJGq-PIcfFMalNIQ0WBmCvwvI",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

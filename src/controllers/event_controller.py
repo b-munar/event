@@ -1,12 +1,25 @@
 from flask_restful import Resource
 from flask import request
 
+from schemas.sportmen_schema import SportmenDeserializeSchema, SportmenSerializeSchema
 from src.database.session import Session
-from src.models.event_model import EventModel
+from src.models.event_model import EventModel, Sportmen
 from src.schemas.event_schema import EventDeserializeSchema, EventSerializeSchema
 from src.utils.authorization import authorization
 
 class EventController(Resource):
+    method_decorators = [authorization]
+    def get(self, **kwargs):
+        event_schema = EventSerializeSchema()
+
+        session = Session()
+        query = session.query(EventModel).filter()
+        session.close()
+        
+        events = [event_schema.dump(event) for event in query]
+        return {"events":events}, 200
+
+class PartnerController(Resource):
     method_decorators = [authorization]
     def post(self, **kwargs):
         if(request.data):
