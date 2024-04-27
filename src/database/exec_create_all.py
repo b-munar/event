@@ -3,6 +3,7 @@ from src.database.engine import engine
 
 from src.models.event_model import EventModel, Sportmen
 
+
 table_objects = [EventModel.__table__, Sportmen.__table__]
 
 if __name__ == "__main__":
