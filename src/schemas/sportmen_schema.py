@@ -1,5 +1,5 @@
 from marshmallow import Schema, fields
-from schemas.event_schema import EventSerializeSchema
+from src.schemas.event_schema import EventSerializeSchema
 
 class SportmenDeserializeSchema(Schema):
     event_id = fields.UUID()
