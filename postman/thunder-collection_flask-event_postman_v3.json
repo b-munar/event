@@ -1,0 +1,162 @@
+{
+    "info": {
+        "_postman_id": "b5d44a1a-193c-442a-9e33-abc8fa2c7a37",
+        "name": "flask-event",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "listar todos los eventos",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:6950/event",
+                    "path": [
+                        "event"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "guardar eventos",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:6950/event/partner",
+                    "path": [
+                        "event",
+                        "partner"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n \"titulo\": \"evente\",\n \"fecha\":\"2019-05-05\",\n \"description\":\"Test event\",\n \"hora\": \"17:00\",\n \"location\":\"Mall\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "registrarme a eventos",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:6950/event/sportmen",
+                    "path": [
+                        "event",
+                        "sportmen"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n\"event_id\": \"dff66bf4-18b4-4857-a077-fc6800ed3ce6\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "listar eventos que me registre",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:6950/event/sportmen",
+                    "path": [
+                        "event",
+                        "sportmen"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "eventos creados por un partner",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:6950/event/partner",
+                    "path": [
+                        "event",
+                        "partner"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "6950"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
