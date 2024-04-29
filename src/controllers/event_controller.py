@@ -97,4 +97,19 @@ class SportmenController(Resource):
         
         events = [sportmen_schema.dump(event)  for event in query]
         return {"events": events}, 200
+    
+    def delete(self, **kwargs):
+        if(request.data):
+            request_json = request.get_json()
+        else:
+            return "", 400
+        session = Session()
+        print(request_json)
+        query = session.query(Sportmen).filter(Sportmen.sportmen==kwargs["user"]["id"], Sportmen.event_id==request_json["event_id"]).delete()
+        if query == 0:
+            return "", 400
+        query = session.query(Sportmen).filter(Sportmen.sportmen==kwargs["user"]["id"], Sportmen.event_id==request_json["event_id"]).delete()
+        print(query)
+        session.commit()
+        return "", 200
         

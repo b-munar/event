@@ -24,12 +24,12 @@ def client():
             yield client
 
 def test_request_ping(client):
-    response = client.get("/events/ping")
+    response = client.get("/event/ping")
     assert response.status_code == 200
     assert b"pong" in response.data
 
 def test_request_post(client):
-    url = "/events"
+    url = "/event/partner"
     headers = {
         "Content-Type": "application/json"
     }
@@ -44,7 +44,7 @@ def test_request_post(client):
     assert response.status_code == 201
 
 def test_request_get(client):
-    url = "/events"
+    url = "/event"
     headers = {
         "Content-Type": "application/json"
     }
@@ -56,6 +56,19 @@ def test_request_get(client):
     "location":"Mall"
     }
     client.post(url, data=json.dumps(data), headers=headers)
-    response = client.get("/events")
+    response = client.get("/event")
     assert response.status_code == 200
     assert b"events" in response.data
+    
+def test_request_get_sportmen(client):
+    url = "/event/sportsman"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = {
+    "event_id": "00917c5a-a6d9-49bc-9e0a-e6977e7458b1"
+    }
+    client.post(url, data=json.dumps(data), headers=headers)
+    response = client.get("/event")
+    assert response.status_code == 200
+    
