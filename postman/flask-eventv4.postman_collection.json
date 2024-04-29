@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "12016b6f-ea54-4a05-b555-9eab2a450ba6",
+		"name": "flask-event",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34080647"
+	},
+	"item": [
+		{
+			"name": "listar todos los eventos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQyODI0MDcsImV4cCI6MTcxNDI5MzIwNywicm9sZSI6Mn0.rEPZxBFKxGHT48EfhgSEzLPIb1VvAZAfMLgNUIZaS1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6950/event",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar eventos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"titulo\": \"evente\",\n \"fecha\":\"2019-05-05\",\n \"description\":\"Test event\",\n \"hora\": \"17:00\",\n \"location\":\"Mall\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6950/event/partner",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"event",
+						"partner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrarme a eventos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQyODI0MDcsImV4cCI6MTcxNDI5MzIwNywicm9sZSI6Mn0.rEPZxBFKxGHT48EfhgSEzLPIb1VvAZAfMLgNUIZaS1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"event_id\": \"00917c5a-a6d9-49bc-9e0a-e6977e7458b1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6950/event/sportmen",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"event",
+						"sportmen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar eventos que me registre",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQyODI0MDcsImV4cCI6MTcxNDI5MzIwNywicm9sZSI6Mn0.rEPZxBFKxGHT48EfhgSEzLPIb1VvAZAfMLgNUIZaS1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6950/event/sportmen",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"event",
+						"sportmen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eventos creados por un partner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQxODIxNTEsImV4cCI6MTcxNDE5Mjk1MSwicm9sZSI6Mn0.MgRZYDsn8Dj99cff1X_YEFzt2bcxAfYinWeJ7xHm5JA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6950/event/partner",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"event",
+						"partner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancelar asistencia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGEzYWQ3Ny03ZDNjLTQ3ZTMtOWM0Mi04NThjYTNlYzUyMjIiLCJpYXQiOjE3MTQyODI0MDcsImV4cCI6MTcxNDI5MzIwNywicm9sZSI6Mn0.rEPZxBFKxGHT48EfhgSEzLPIb1VvAZAfMLgNUIZaS1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"event_id\": \"00917c5a-a6d9-49bc-9e0a-e6977e7458b1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6950/event/sportmen",
+					"host": [
+						"localhost"
+					],
+					"port": "6950",
+					"path": [
+						"event",
+						"sportmen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
