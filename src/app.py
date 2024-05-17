@@ -2,7 +2,8 @@ from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
 from src.controllers.ping_controller import Ping
-from src.controllers.event_controller import EventController, PartnerController, SportmenController
+from src.controllers.event_controller import EventController, PartnerController
+from src.controllers.event_controller_2 import SportmenController
 
 def create_app():
     app = Flask(__name__)

@@ -1,0 +1,2 @@
+[run]
+omit = src/controllers/event_controller_2.py, src/utils
